@@ -1,14 +1,10 @@
 #  -*- coding: utf-8 -*-
 from random import choice
+import sys
+argumentos = sys.argv
 
-def validaPass(passwd):
-    pwd = validaTamanho(passwd)[0]
-
-    print pwd
-
-def validaTamanho(pwd):
-    if len(pwd) > 8:
-        return {'tamanho':len(pwd),'pontos':len(pwd)*4,'requires':1}
+if '-v' in argumentos:
+    print('VERBOSE')
 
 def pwdSize():
     size = choice(range(12))
@@ -29,7 +25,7 @@ def passGen():
 def pwd():
     passwd = passGen()
     print('\n'+'='*10+'\n'+passwd)
-    validaPass(passwd)
+
 
 pwd()
 pwd()

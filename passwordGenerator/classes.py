@@ -85,13 +85,20 @@ class Validacoes:
 
     def validaNumORChar(self):
         pwd = self.passwd
-
         ok = 0
         if self.validaNumeros() != False:
             ok +=1
         if self.validaCaracteres() != False:
             ok +=1
         return [ok,ok*2]
+
+    def duplicate_count(self):
+        pwd = self.passwd
+        count = ''
+        for a in pwd.lower():
+        	if pwd.lower().count(a) > 1:
+        		count = count + a
+        return [len(count),-len(count)]
 
     def validate(self):
         pwd = self.passwd
@@ -112,6 +119,9 @@ class Validacoes:
             pontuacao += self.validaTamanho()[1]
         if self.validaNumORChar() != False:
             pontuacao += self.validaNumORChar()[1]
+        if self.duplicate_count() != False:
+            pontuacao += self.duplicate_count()[1]
+        else: return False
 
         valores = "\nMaiusculas: {}, +{}".format(self.validaMaiusculas()[0],self.validaMaiusculas()[1])
         valores += "\nMinusculas: {}, +{}".format(self.validaMinusculas()[0],self.validaMinusculas()[1])

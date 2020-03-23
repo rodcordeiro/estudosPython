@@ -1,11 +1,11 @@
 
 # def deducoes():
 # Deduções
-# Caracteres repetidos	Incr	-(n(n-1))
+- Caracteres repetidos	Incr	-(n(n-1))
 # Letras maiúsculas consecutivas	Flat	-(n*2)
 # Letras minúsculas consecutivas	Flat	-(n*2)
 # Números consecutivos	Flat	-(n*2)
 # Sequência de letras (3+)	Flat	-(n*3)
 # Sequência de números (3+)	Flat	-(n*3)
-
+https://password.kaspersky.com/
 https://testedesenha.com.br/
